@@ -107,8 +107,9 @@ tones = {
 
 # put the notes for your song in here!
 #song = ["F5", "F6", "E6", "F6", "F5", "P", "F5", "P", "C6", "AS5", "A5", "C6", "F6", "P", "F6", "P", "G6", "FS6", "G6", "G5", "P", "G5", "P", "G6", "F6", "E6", "D6", "C6", "P", "C6", "P", "D6", "E6", "F6", "E6", "D6", "C6", "D6", "C6", "AS5", "A5", "AS5", "A5", "G5", "F5", "G5", "F5", "E5", "D5", "C5", "D5", "E5", "F5", "G5", "AS5", "A5", "G5", "A5", "F5", "P", "F5"]
-song = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
-#song = ["FS4", "A4", "CS5", "A4", "FS4", "D4", "D4", "D4", "CS4", "D4", "FS4", "A4", "CS5", "A4", "FS4", "E5", "P", "DS5", "P", "D5", "GS4", "CS5", "FS4", "CS5", "GS4", "CS5", "G4", "FS4", "E4", "E4", "E4", "E4", "P", "E4", "E4", "E4", "DS4", "D4", "CS4", "A4", "CS5", "A4", "FS4", "E4", "E4", "E4", "P", "E5", "E5", "E5", "P", "B3", "FS4", "A4", "CS5", "A4", "FS4", "CS5", "CS5", "B4", "P", "B4", "G4", "D4", "CS4", "B4", "G4", "CS4", "A4", "FS4", "C4", "B3", "F4", "D4", "B3", "E4", "E4", "E4", "P", "AS4", "B4", "CS5", "D5", "FS5", "B5", "P", "A3", "AS3", "B3", "AS3", "B3", "P", "A3", "AS3", "B3", "FS4", "CS4", "B3", "AS3", "B3", "A3", "B3", "B3", "C4", "CS4", "C4", "CS4", "CS4", "C4", "CS4", "GS4", "DS4", "CS4", "ES4", "B3", "CS4", "D4", "A4", "D4", "E4", "E4", "E4", "P", "", ""]
+#song = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
+song = ["FS4", "A4", "CS5", "A4", "FS4", "D4", "D4", "D4", "CS4", "D4", "FS4", "A4", "CS5", "A4", "FS4", "E5", "P", "DS5", "P", "D5", "GS4", "CS5", "FS4", "CS5", "GS4", "CS5", "G4", "FS4", "E4", "E4", "E4", "E4", "P", "E4", "E4", "E4", "DS4", "D4", "CS4", "A4", "CS5", "A4", "FS4", "E4", "E4", "E4", "P", "E5", "E5", "E5", "P", "B3", "FS4", "A4", "CS5", "A4", "FS4", "CS5", "CS5", "B4", "P", "B4", "G4", "D4", "CS4", "B4", "G4", "CS4", "A4", "FS4", "C4", "B3", "F4", "D4", "B3", "E4", "E4", "E4", "P", "AS4", "B4", "CS5", "D5", "FS5", "A5", "P", "A3", "AS3", "B3", "AS3", "B3", "P", "A3", "AS3", "B3", "FS4", "CS4", "B3", "AS3", "B3", "A3", "B3", "B3", "C4", "CS4", "C4", "CS4", "CS4", "C4", "CS4", "GS4", "DS4", "CS4", "DS4", "B3", "CS4", "D4", "A4", "D4", "E4", "E4", "E4", "P",                "FS4", "A4", "CS5", "A4", "FS4", "D4", "D4", "D4", "CS4", "D4", "FS4", "A4", "CS5", "A4", "FS4", "E5", "P", "DS5", "P", "D5", "GS4", "CS5", "FS4", "CS5", "GS4", "CS5", "G4", "FS4", "E4", "E4", "E4", "E4", "P", "E4", "E4", "E4", "DS4", "D4", "CS4", "A4", "CS5", "A4", "FS4", "E4", "E4", "E4", "P", "E5", "E5", "E5", "P", "B3", "FS4", "A4", "CS5", "A4", "FS4", "CS5", "CS5", "B4", "P", "B4", "G4", "D4", "CS4", "B4", "G4", "CS4", "A4", "FS4", "C4", "B3", "F4", "D4", "B3", "E4", "E4", "E4", "P", "AS4", "B4", "CS5", "D5", "FS5", "A5", "P", "A3", "AS3", "B3", "AS3", "B3", "P", "A3", "AS3", "B3", "FS4", "CS4", "B3", "AS3", "B3", "A3", "B3", "B3", "C4", "CS4", "C4", "CS4", "CS4", "C4", "CS4", "GS4", "DS4", "CS4", "DS4", "B3", "CS4", "D4", "A4", "D4", "E4", "E4", "E4", "P"]
+# ^ Wii Theme Tune
 def clear():                        # this function clears Pico Explorer's screen to black
     explorer.set_pen(0, 0, 0)
     explorer.clear()
@@ -130,7 +131,7 @@ def playsong(song):                 # this function plays your song
             bequiet()
         else:
             playtone(tones[song[i]])
-            explorer.set_pen(0, 255, 0)  # switch to green pen
+            explorer.set_pen(0, 255, 255)  # switch to green pen
             explorer.rectangle(a, 240 - (int((tones[song[i]]) / 21)), 5, 240)  # draw a green bar corresponding to the frequency of the note
             a += 7
         if a >= 240:  # clears the screen if the green bars reach the right hand edge
